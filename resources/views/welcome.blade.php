@@ -113,8 +113,9 @@
                         <td>
                             <ul>
                             @foreach($classroom->students as $student)
+                            @auth
                             <li><a href="{{route('handleDeleteStudent',['id'=>$student->id])}}">{{$student->name}}</a></li>
-
+                            @endauth
                             @endforeach
                             </ul>
                         </td>
@@ -122,7 +123,7 @@
                 @endforeach    
                 </tbody>
             </table>
-           
+            
             </div>            
         </div>
         

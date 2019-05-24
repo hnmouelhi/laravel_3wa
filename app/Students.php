@@ -4,7 +4,9 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
-class Students extends Model
+use Illuminate\Foundation\Auth\User as Authenticatable;
+
+class Students extends Authenticatable
 {
 	use SoftDeletes;
     protected $fillable = [
